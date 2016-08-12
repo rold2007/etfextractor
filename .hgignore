@@ -1,3 +1,4 @@
 syntax: glob
 EtfExtractor/bin/
 EtfExtractor/obj/
+.vs/EtfExtractor/v14/.suo
