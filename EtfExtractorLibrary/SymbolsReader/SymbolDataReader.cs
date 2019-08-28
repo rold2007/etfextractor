@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using EtfExtractor.Settings;
-
-namespace EtfExtractor.SymbolsReader
+﻿namespace EtfExtractorLibrary.SymbolsReader
 {
-    class SymbolDataReader
-    {
-        SymbolsReaderSettings SymbolDataReaderSettings { get; }
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Net;
+   using System.Threading.Tasks;
+   using EtfExtractorLibrary.Settings;
 
-        internal SymbolDataReader(SymbolsReaderSettings settings)
+   public class SymbolDataReader
+    {
+        ISymbolsReaderSettings SymbolDataReaderSettings { get; }
+
+        public SymbolDataReader(ISymbolsReaderSettings settings)
         {
             this.SymbolDataReaderSettings = settings;
         }
 
-        internal IList<SymbolData> GetSymbolData(List<string> tickers)
+        public IList<SymbolData> GetSymbolData(List<string> tickers)
         {
             if (SymbolDataReaderSettings.NumberOfQuotesToRead > 0)
             {

@@ -1,0 +1,9 @@
+// TODO: Make it work in .Net Core
+// TODO: Add code coverage to everything except Program.cs and download code
+// TODO: Download both xlsx files.
+// TODO: Extract data from both files. Need to support a different format ?
+// TODO: Add data column to identify from which list is each stock.
+// TODO: Extract "company description" and add new column.
+
+    <TickersProviderSettings FileUri="http://www.tsx.com/resource/en/563" SheetName="" TickerListRowIndex="7" TickerListColumnIndex="2"/>
+ 

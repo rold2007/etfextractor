@@ -1,10 +1,10 @@
-﻿namespace EtfExtractor.Settings
-{
-   using System;
-   using System.Configuration;
-   using EtfExtractorLibrary.Settings;
+﻿using System;
+using System.Configuration;
 
-   class TickersProviderSettings : ConfigurationSection, ITickersProviderSettings
+namespace EtfExtractor.Settings
+{
+   [Obsolete]
+   class TickersProviderSettings : ConfigurationSection
    {
       private static readonly TickersProviderSettings settings =
           ConfigurationManager.GetSection("TickersProviderSettings") as TickersProviderSettings;
@@ -33,7 +33,7 @@
          set { this["TickerListRowIndex"] = value; }
       }
 
-        [ConfigurationProperty("TickerListColumnIndex", DefaultValue ="1", IsRequired = true)]
+      [ConfigurationProperty("TickerListColumnIndex", DefaultValue = "1", IsRequired = true)]
       [IntegerValidator(MinValue = 0)]
       public int TickerListColumnIndex
       {
