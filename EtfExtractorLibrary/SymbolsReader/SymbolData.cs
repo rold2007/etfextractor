@@ -1,9 +1,9 @@
-using EtfExtractor.Settings;
+//using EtfExtractorLibrary.Settings;
 using HtmlAgilityPack;
 
-namespace EtfExtractor.SymbolsReader
+namespace EtfExtractorLibrary.SymbolsReader
 {
-    class SymbolData
+    public class SymbolData
     {
         private readonly string _missingQuoteValue;
         private readonly string _columnSeparator;
@@ -56,9 +56,9 @@ namespace EtfExtractor.SymbolsReader
             return $"{Name}{_columnSeparator}{DividendFrequency}{_columnSeparator}{PeRatio}{_columnSeparator}{Yield}{_columnSeparator}{MarketCapitalization}";
         }
 
-        public static string GetHeader()
+      public static string GetHeader(string columnSeparator)
         {
-            string separator = SymbolsReaderSettings.Instance.ColumnSeparator;
+            string separator = columnSeparator;
             return $"Name{separator}DividendFrequency{separator}PeRatio{separator}Yield{separator}MarketCapitalization";
         }
     }

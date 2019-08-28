@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EtfExtractor.TickersProvider
+namespace EtfExtractorLibrary.TickersProvider
 {
     internal interface ITickersProvider
     {

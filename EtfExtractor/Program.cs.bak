@@ -5,9 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using EtfExtractor.Settings;
-using EtfExtractorLibrary;
-using EtfExtractorLibrary.SymbolsReader;
-using EtfExtractorLibrary.TickersProvider;
+using EtfExtractor.SymbolsReader;
+using EtfExtractor.TickersProvider;
 
 namespace EtfExtractor
 {
@@ -17,15 +16,9 @@ namespace EtfExtractor
       {
          try
          {
-            //object aaa = ConfigurationManager.GetSection("TickersProviderSettings");
-            //object bbb = ConfigurationManager.GetSection("TickersProviderSettingsArray");
-
             ExcelTickersProvider tickersProvider = new ExcelTickersProvider(TickersProviderSettings.Instance);
             List<string> tickers = tickersProvider.GetTickers().ToList();
-
             /*
-// From http://www.tmxmoney.com/en/research/closed-end_funds.html
-
             List<string> tickers = new List<string>();
 
             List<string> tickersRaw = new List<string>(new string[]
@@ -232,7 +225,7 @@ namespace EtfExtractor
          string filePath = string.Concat(outputFolder, DateTime.Now.ToString("yyyy_MM_dd_OUTPUT"), ".csv");
          try
          {
-            StringBuilder outputData = new StringBuilder(SymbolData.GetHeader(SymbolsReaderSettings.Instance.ColumnSeparator)).AppendLine();
+            StringBuilder outputData = new StringBuilder(SymbolData.GetHeader()).AppendLine();
 
             foreach (var symbolData in data)
             {

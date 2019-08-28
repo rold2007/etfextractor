@@ -1,21 +1,21 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-
-namespace EtfExtractor
+namespace EtfExtractorLibrary
 {
-    internal class Log
+   using System;
+   using System.Collections.Generic;
+   using System.IO;
+
+   public class Log
     {
         static Log()
         {
             LogWriters = new List<TextWriter> { Console.Out };
         }
         internal static IList<TextWriter> LogWriters { get; set; }
-        internal static void Info(string message)
+        public static void Info(string message)
         {
             WriteMessage(string.Concat("INFO: ", message));
         }
-        internal static void Error(string message)
+        public static void Error(string message)
         {
             WriteMessage(string.Concat("Error: ", message));
         }

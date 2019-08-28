@@ -2,3 +2,12 @@ syntax: glob
 EtfExtractor/bin/
 EtfExtractor/obj/
 .vs/EtfExtractor/v14/.suo
+.vs/
+EtfExtractorLibrary/bin/
+EtfExtractorLibrary/obj/
+packages/
+_NCrunch_EtfExtractor/EtfExtractor.crunchsolution.cache
+_NCrunch_EtfExtractor/EtfExtractor.executiontimes.cache
+EtfExtractor.v3.ncrunchsolution.user
+EtfExtractorCore/bin/
+EtfExtractorCore/obj/
